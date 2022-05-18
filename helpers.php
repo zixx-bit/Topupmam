@@ -48,6 +48,7 @@ function login_error_redirect($url = 'login.php'){
   header('Location: '.$url);
 }
 
+//this is the permission function to block anyone from accessing the admin page if they dont have the logins
 function permission_error_redirect($url = 'login.php'){
   $_SESSION ['error_flash'] = 'You do not have permission  to access this page';
   header('Location: '.$url);
